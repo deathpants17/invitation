@@ -1,0 +1,36 @@
+<html>
+
+<head>
+<script src="https://raw.githubusercontent.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+<title>birthday card</title>
+
+ <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="birthday-card">
+
+  <img src="pattern-invitation.png"/>
+
+
+</div>
+
+<a-scene vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;debugUIEnabled: false;">
+    <a-assets>
+        <img id="BDAY" src="bday-card.png"/>
+    </a-assets>
+
+    <a-marker type="pattern" url="pattern-invitation.patt">
+        <a-plane src="#BDAY" position="0 0 0" width="2" height="3" rotation="-90 0 0"></a-plane>
+    </a-marker>
+
+</a-scene>
+
+
+</body>
+
+</html>
